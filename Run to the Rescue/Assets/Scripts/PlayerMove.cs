@@ -18,14 +18,14 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
     }
 
      void FixedUpdate()
     {
+        if (Input.GetButton("Jump"))
+        {
+            jump = true;
+        }
         cont.Move(horizontalMove*Time.fixedDeltaTime, false, jump);
         jump = false;
     }
