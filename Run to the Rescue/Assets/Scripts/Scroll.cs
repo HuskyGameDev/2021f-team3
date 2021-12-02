@@ -9,7 +9,7 @@ public class Scroll : MonoBehaviour
 
     private float width;
 
-    private float scrollSpeed = -2f;
+    private float scrollSpeed = -4f;
 
 // Start is called before the first frame update
 void Start()
@@ -18,7 +18,7 @@ void Start()
         collider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
 
-        width = collider.size.x;
+        width = collider.size.x*2;
         collider.enabled = false;
 
         rb.velocity = new Vector2(scrollSpeed, 0);

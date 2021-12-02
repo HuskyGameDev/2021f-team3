@@ -124,7 +124,7 @@ public class CharacterController2D : MonoBehaviour
 				Flip();
 			}
 		}
-		// If the player should jump...
+		// If the player should fly
 		if (jump)
 		{
 			// Add a vertical force to the player.

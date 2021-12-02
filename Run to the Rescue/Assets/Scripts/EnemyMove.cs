@@ -12,11 +12,22 @@ public class EnemyMove : MonoBehaviour
 
     private int index;
 
+    private float scrollSpeed = -4f;
+    public Rigidbody2D rb;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.velocity = new Vector2(scrollSpeed, 0);
+    }
+
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, positions[index].y), Time.deltaTime * speed);
 
-        if (transform.position == positions[index])
+        if (transform.position.y == positions[index].y)
         {
             if (index == positions.Length - 1)
             {
