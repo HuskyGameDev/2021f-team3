@@ -26,6 +26,7 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, positions[index].y), Time.deltaTime * speed);
+        Invoke("SpeedUp", 10);
 
         if (transform.position.y == positions[index].y)
         {
@@ -38,5 +39,9 @@ public class EnemyMove : MonoBehaviour
                 index++;
             }
         }
+    }
+    void speedUp()
+    {
+        scrollSpeed = scrollSpeed - 10;
     }
 }
