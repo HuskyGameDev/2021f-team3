@@ -5,11 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    public float invincibilityLength;
+    private float invincibilityCounter;
+
+    void Update
+    {
+        if (invincibilityCounter>0)
+        {
+        invincibilityCounter-=Time.deltaTime;
+        } 
+    }
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
+        if (invincibilityCounter<=0)
+    { 
+             if (collision.gameObject.CompareTag("Enemy"))
+              {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+              }
+        if (collision.gameObject.CompareTag("invincible")
+        {
+            invincibilityCounter = invincibilityLength;
         }
     }
 }
