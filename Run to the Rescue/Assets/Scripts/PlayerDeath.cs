@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    public int coinGrab;
+    public int shieldHits;
+    public int coinCount;
+    private void Update()
+    {
+
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (shieldHits == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+        else
+        {
+            shieldHits--;
+        }
+
+        if (collision.gameObject.CompareTag("Coins"))
+        {
+            coinCount++;
         }
     }
 }
