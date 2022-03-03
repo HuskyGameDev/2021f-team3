@@ -27,9 +27,9 @@ public class PlayerDeath : MonoBehaviour
             shieldHits--;
         }
 
-        if (collision.gameObject.CompareTag("Coins"))
-        {
-            coinCount++;
-        }
+      //  if (collision.gameObject.CompareTag("Coins"))
+      //  {
+       //     coinCount++;
+       // }
     }
 }

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0f8f05b581cbcd04c8efa3aef0b30b5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -175,4 +175,6 @@ MonoBehaviour:
   positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  scroll: {fileID: 0}
+  scrollObject: {fileID: 3098862068211184450, guid: 615590b5dad436a40a69fb9b49f2548f, type: 3}
   rb: {fileID: 0}
