@@ -9,7 +9,7 @@ public class Scroll : MonoBehaviour
 
     private float width;
 
-    private float scrollSpeed = -4f;
+    private float scrollSpeed1 = -4f;
 
 // Start is called before the first frame update
 void Start()
@@ -21,7 +21,7 @@ void Start()
         width = collider.size.x*2;
         collider.enabled = false;
 
-        rb.velocity = new Vector2(scrollSpeed, 0);
+        rb.velocity = new Vector2(scrollSpeed1, 0);
     }   
 
     // Update is called once per frame
